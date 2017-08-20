@@ -11,15 +11,16 @@ def fib_recurse(n):
 def fib_table(n):
 	"""
 	n = Integer
-	Faster fibonacci of n
+	Faster fibonacci of n 
+	O(n)
 	"""
-	table = [0]
+	table = [0, 1]
 	first = 0
 	second = 1
 
-	for i in range(n):
-		table.append(second)
+	for i in range(n - 1):
 		third = first + second
+		table.append(third)
 
 		first = second
 		second = third
