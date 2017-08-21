@@ -14,13 +14,13 @@ def fib_table(n):
 	Faster fibonacci of n 
 	O(n)
 	"""
-	table = [0, 1]
+	table = [0]
 	first = 0
 	second = 1
 
-	for i in range(n - 1):
+	for i in range(n):
 		third = first + second
-		table.append(third)
+		table.append(second)
 
 		first = second
 		second = third
@@ -48,14 +48,12 @@ def stressTest(n):
 		print("Fib of", str(n), "is equal by both functions:", fast_fib)
 	else:
 		print("Fib of", str(n), "is NOT equal by both functions.", "'slow_fib'=", slow_fib, "'fast_fib'=", fast_fib)
-		break
+		
 	
 	if diff1 > diff2:
-		print("'fib_table' faster than 'fib_table'")
+		print("'fib_table' faster than 'fib_recurse'")
 	elif diff1 < diff2:
 		print("'fib_recurse' faster than 'fib_table'")
-		break
 	else:
 		print("both functions were computed in equal times")
-		break
 
