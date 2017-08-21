@@ -48,11 +48,14 @@ def stressTest(n):
 		print("Fib of", str(n), "is equal by both functions:", fast_fib)
 	else:
 		print("Fib of", str(n), "is NOT equal by both functions.", "'slow_fib'=", slow_fib, "'fast_fib'=", fast_fib)
+		break
 	
 	if diff1 > diff2:
 		print("'fib_table' faster than 'fib_table'")
 	elif diff1 < diff2:
 		print("'fib_recurse' faster than 'fib_table'")
+		break
 	else:
 		print("both functions were computed in equal times")
+		break
 
