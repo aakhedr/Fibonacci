@@ -14,18 +14,10 @@ def fib_table(n):
 	Faster fibonacci of n 
 	O(n)
 	"""
-	table = [0]
-	first = 0
-	second = 1
-
+	first, second = 0, 1
 	for i in range(n):
-		third = first + second
-		table.append(second)
-
-		first = second
-		second = third
-		
-	return table[-1]
+		first, second = second, first + second
+	return first
 
 import time
 
