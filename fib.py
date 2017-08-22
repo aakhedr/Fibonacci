@@ -15,7 +15,7 @@ def fib_table(n):
 	O(n)
 	"""
 	first, second = 0, 1
-	for i in range(n):
+	for _ in range(n):
 		first, second = second, first + second
 	return first
 
